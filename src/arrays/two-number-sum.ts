@@ -19,6 +19,8 @@
  * - Space Complexity: O(N)
  * - N is the number of elements in the input array.
  * -------------------------------------------------------------------------------------------
+ * NOTE:
+ * - Set is commonly used to store unique elements when solving problems related to Arrays.
  */
 function twoNumberSum(array: number[], targetSum: number) {
   // Write your code here.
