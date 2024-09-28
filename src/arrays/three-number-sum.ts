@@ -12,6 +12,10 @@
  * -------------------------------------------------------------------------------------------
  * SOLUTION:
  * - Sort the input array in ascending order.
+ * - Because if the current number plus two numbers are greater than the target sum
+ * - we know that we need to move the right pointer to the left, to decrease the sum.
+ * - For example: The current number is -8, we go find -8 + x + y = target, where target = 0.
+ * - x is the left pointer and y is the right pointer. If -8 + x + y > 0, we need to decrease the sum by moving the right pointer to the left.
  * - Iterate through the input array.
  * - For each number, call a helper function to find two numbers that add up with the current number to the target sum.
  * - The helper function uses two pointers to find the two numbers.

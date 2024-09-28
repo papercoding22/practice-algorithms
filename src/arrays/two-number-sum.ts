@@ -21,6 +21,7 @@
  * -------------------------------------------------------------------------------------------
  * NOTE:
  * - Set is commonly used to store unique elements when solving problems related to Arrays.
+ * - The Set data structure has O(1) time complexity for add, delete, and search operations.
  */
 function twoNumberSum(array: number[], targetSum: number) {
   // Write your code here.
