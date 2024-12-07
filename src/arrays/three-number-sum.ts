@@ -2,6 +2,7 @@
  * @author: Paper Coding
  * @link: https://www.algoexpert.io/questions/three-number-sum
  * Difficulty: Medium
+ * Pattern: Two Pointers
  * Description:
  * - Given an array of integers, return an array of three numbers that add up to a target sum.
  * - The number in the output array must be in ascending order.
