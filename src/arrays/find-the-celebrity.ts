@@ -11,7 +11,6 @@
  * Input: graph = [[1,1,0],[0,1,0],[1,1,1]]
  * Output: 1
  */
-
 export const party = (function partyTime() {
   const matrix = [] as number[][];
 
