@@ -8,6 +8,19 @@
  * Example:
  * - Input: [0,1,0,3,12]
  * - Output: [1,3,12,0,0]
+ * Hints:
+ * - 1. You must do this in-place without making a copy of the array.
+ * - 2. Minimize the total number of operations.
+ * - 3. Use two pointers to solve the problem.
+ * - 4. Try to solve it in one pass.
+ * Solution: Slow & Fast Pointers
+ * - Initialize slowPointer to 0
+ * - Iterate through the array with fastPointer
+ * - If the element at fastPointer is not 0, move it to the slowPointer and increment slowPointer
+ * - After the loop, fill the rest of the array with 0
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ * Tags: Array, Two Pointers
  */
 
 function moveZeroes(nums: number[]): number[] {
