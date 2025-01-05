@@ -1,5 +1,5 @@
 import { it, expect, describe } from 'vitest';
-import { threeSum } from '../3Sum-leetcode';
+import { threeSum } from '../two-pointers/3Sum-leetcode';
 
 describe('threeSum', () => {
   // for the input [0, 0, 0]

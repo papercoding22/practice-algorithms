@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { maxArea } from '../container-with-most-water';
+import { maxArea } from '../two-pointers/container-with-most-water';
 
 describe('Container with Most Water', () => {
   it('should return the maximum area of the container', () => {

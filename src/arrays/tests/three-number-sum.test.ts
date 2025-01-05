@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { threeNumberSum } from '../three-number-sum';
+import { threeNumberSum } from '../two-pointers/three-number-sum';
 
 describe('threeNumberSum()', () => {
   it('should return an array of three numbers that add up to a target sum', () => {
