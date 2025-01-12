@@ -13,6 +13,19 @@
  * - Input: s = "ab##", t = "c#d#" => Output: true
  * - Input: s = "a##c", t = "#a#c" => Output: true
  * - Input: s = "a#c", t = "b" => Output: false
+ * Intuition:
+ * - Use two pointers to compare the strings from the end.
+ * - Skip the characters that are removed by the backspace.
+ * - If the characters are different, return false.
+ * - If one string is empty, return false.
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ * Constraints: 1 <= s.length, t.length <= 200
+ * Strategy:
+ * - Create a helper function to get the next valid index.
+ * - Iterate the strings from the end.
+ * Key Takeaways:
+ * - Use two pointers to compare the strings from the end.
  */
 
 function getNextValidIndex(s: string, index: number): number {

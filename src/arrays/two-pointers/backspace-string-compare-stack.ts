@@ -1,7 +1,7 @@
 /**
  * Author: papercoding22
  * Link: https://leetcode.com/problems/backspace-string-compare/
- * Pattern: Two Pointers
+ * Pattern: Stack
  * Level: Easy
  * Description: Backspace String Compare
  * - Given two strings s and t, return true if they are equal
@@ -14,6 +14,16 @@
  * - Input: s = "a##c", t = "#a#c" => Output: true
  * - Input: s = "a#c", t = "b" => Output: false
  * Intuition:
+ * - Use stack to build the final string after backspacing.
+ * - Compare the final strings of s and t.
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ * Constraints: 1 <= s.length, t.length <= 200
+ * Strategy:
+ * - Create a helper function to build the final string after backspacing.
+ * - Build the final strings of s and t.
+ * - Compare the final strings of s and t.
+ * Key Takeaways:
  * - Use stack to build the final string after backspacing.
  * - Compare the final strings of s and t.
  */
