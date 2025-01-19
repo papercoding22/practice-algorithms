@@ -25,12 +25,8 @@ function numRescueBoats(people: number[], limit: number): number {
     // Check if we can fit both current lightest and heaviest person
     if (left < right && people[left] + people[right] <= limit) {
       left++;
-      right--;
     }
-    // If not, take the heavier person alone
-    else {
-      right--;
-    }
+    right--;
     boats++;
   }
 
