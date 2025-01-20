@@ -8,6 +8,15 @@
  * Example:
  * - Input: people = [1, 2], limit = 3 => Output: 1
  * - Input: people = [3, 2, 2, 1], limit = 3 => Output: 3
+ * Intuition: Use two pointers to try pairing heaviest with lightest.
+ * - Sort people by weight in ascending order.
+ * - Use two pointers to try pairing heaviest with lightest.
+ * - Check if we can fit both current lightest and heaviest person.
+ * - If we can, move the left pointer to the next lightest person.
+ * - Move the right pointer to the next heaviest person.
+ * - Increment the number of boats.
+ * Time Complexity: O(n log n)
+ * Space Complexity: O(1)
  * @param people - array of people's weights
  * @param limit - maximum weight limit of the boat
  * @returns - minimum number of boats required to save all people
