@@ -1,20 +1,23 @@
-function findTriplets(nums: number[], currentIndex: number) {
-  // nums = [2, 3, 4, 4]
-  // 2, 3, 4 (With the first 4)
-  // 2, 3, 4 (With the last 4)
-  // 2, 3, 4 (With the 3 and the first 4)
-  // 2, 3, 4 (With the 3 and the last 4)
-  let count = 0;
-  let left = currentIndex + 1;
+function countValidTriangles(nums: number[], currentIndex: number) {
+  let slowPointer = currentIndex + 1;
 
-  while (left < nums.length - 1) {
-    let right = nums.length - 1;
-    const sum = nums[currentIndex] + nums[left];
-    while (sum <= nums[right] && right > left) {
-      right--;
+  // increase count by 1 when 3 sides are valid
+  let count = 0;
+
+  while (slowPointer < nums.length - 1) {
+    let fastPointer = slowPointer + 1;
+
+    while (fastPointer < nums.length) {
+      if (nums[currentIndex] + nums[slowPointer] > nums[fastPointer]) {
+        count += 1;
+      } else {
+        break;
+      }
+
+      fastPointer += 1;
     }
-    count += 1;
-    left++;
+
+    slowPointer += 1;
   }
 
   return count;
@@ -25,7 +28,7 @@ function triangleNumber(nums: number[]): number {
 
   let count = 0;
   for (let i = 0; i < sortedNums.length - 2; i++) {
-    count += findTriplets(sortedNums, i);
+    count += countValidTriangles(sortedNums, i);
   }
 
   return count;
