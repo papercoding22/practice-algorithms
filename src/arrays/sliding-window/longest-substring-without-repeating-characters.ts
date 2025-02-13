@@ -1,3 +1,15 @@
+/**
+ * Description: Given a string s, find the length of the longest substring without repeating characters.
+ * Example:
+ * - Input: s = "abcabcbb" => Output: 3
+ * - Input: s = "bbbbb" => Output: 1
+ * - Input: s = "pwwkew" => Output: 3
+ * Approach: Sliding Window
+ * Time complexity: O(n)
+ * Space complexity: O(min(n, m)), where n is the length of the string and m is the size of the character set
+ * @param s
+ * @returns number
+ */
 function lengthOfLongestSubstring(s: string): number {
   const setChars = new Set<string>(); // Check existing characters
   let head = 0; // Head of the window
