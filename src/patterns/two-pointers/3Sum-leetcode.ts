@@ -1,25 +1,10 @@
 /**
  * Author: @papercoding22
  * Link: https://leetcode.com/problems/3sum/
- * Pattern: Two Pointers
- * Description:
- * - Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
- * - Notice that the solution set must not contain duplicate triplets.
- * - Example 1: [-1, 0, 1, 2, -1, -4] => [[-1, -1, 2], [-1, 0, 1]]
- * - Example 2: [0, 1, 1] => []
- * - Example 3: [0, 0, 0] => [[0, 0, 0]]
- * - Constraints: 0 <= nums.length <= 3000, -10^5 <= nums[i] <= 10^5
- * Intuition:
- * - Sort the array first
- * - Loop through the array
- * - For each element, find the two other elements that sum up to 0
- * - To avoid duplicates, skip the same element
- * - To avoid duplicate triplets, skip the same left and right elements
- * - If the sum is less than 0, move the left pointer
- * - If the sum is greater than 0, move the right pointer
- * - If the sum is 0, add the triplet to the result
- * Time complexity: O(n^2)
- * Space complexity: O(1)
+ * Pattern: Two Pointers (Left and Right)
+ * Recognition:
+ * - Given a number, find pairs that sum to a target number.
+ * - Sorted input to efficiently find pairs.
  */
 
 function findTriplets(nums: number[], currentIndex: number) {
@@ -62,7 +47,7 @@ function threeSum(nums: number[]): number[][] {
       continue;
     }
     const triplets = findTriplets(sortedNums, i);
-    results.push(...triplets);
+    results.concat(triplets);
   }
 
   return results;
