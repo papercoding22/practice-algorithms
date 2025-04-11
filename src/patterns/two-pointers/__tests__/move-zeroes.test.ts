@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { moveZeroes } from '../two-pointers/move-zeroes';
+import { moveZeroes } from '../move-zeroes';
 
 describe('moveZeroes', () => {
   it('should move all zeroes to the end of the array', () => {
