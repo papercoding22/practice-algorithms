@@ -1,25 +1,10 @@
 /**
  * Link: https://leetcode.com/problems/boats-to-save-people/
  * Pattern: Two Pointers
- * Description: Boats to Save People
- * - The i-th person has weight people[i], and each boat can carry a maximum weight of limit.
- * - Each boat carries at most 2 people at the same time, provided the sum of the weight of those people is at most limit.
- * - Return the minimum number of boats to carry every given person.
- * Example:
- * - Input: people = [1, 2], limit = 3 => Output: 1
- * - Input: people = [3, 2, 2, 1], limit = 3 => Output: 3
- * Intuition: Use two pointers to try pairing heaviest with lightest.
- * - Sort people by weight in ascending order.
- * - Use two pointers to try pairing heaviest with lightest.
- * - Check if we can fit both current lightest and heaviest person.
- * - If we can, move the left pointer to the next lightest person.
- * - Move the right pointer to the next heaviest person.
- * - Increment the number of boats.
- * Time Complexity: O(n log n)
- * Space Complexity: O(1)
- * @param people - array of people's weights
- * @param limit - maximum weight limit of the boat
- * @returns - minimum number of boats required to save all people
+ * Recognition:
+ * - Find the pair of people that can share a boat.
+ * - Sort the people by weight to maximize the number of pairs.
+ * - Use two pointers to find the heaviest and lightest person that can share a boat.
  */
 function numRescueBoats(people: number[], limit: number): number {
   // Sort people by weight in ascending order
