@@ -4,6 +4,13 @@ describe('maximumSubarraySum', () => {
   const testCases = [
     {
       input: {
+        nums: [1, 5, 4, 2, 9, 9, 9],
+        k: 3,
+      },
+      output: 15,
+    },
+    {
+      input: {
         nums: [1, 2, 3, 4, 5],
         k: 2,
       },

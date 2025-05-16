@@ -9,7 +9,6 @@ function maximumSubarraySum(nums: number[], k: number): number {
   const seen = new Set<number>();
   for (let right = 0; right < nums.length; right++) {
     currentSum += nums[right];
-    seen.add(nums[k]);
     while (right - left + 1 > k || seen.has(nums[right])) {
       // Shrink
       currentSum -= nums[left];
@@ -17,7 +16,9 @@ function maximumSubarraySum(nums: number[], k: number): number {
       left++;
     }
 
-    while (right - left + 1 < k) {
+    seen.add(nums[right]);
+
+    while (right - left + 1 === k) {
       maxSum = Math.max(maxSum, currentSum);
     }
   }
