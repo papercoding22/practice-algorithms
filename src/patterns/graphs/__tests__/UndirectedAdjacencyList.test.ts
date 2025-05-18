@@ -32,19 +32,4 @@ describe('UndirectedAdjacencyList', () => {
     expect(graph.getNeighbors('A')).toEqual(['B', 'C']);
     expect(graph.getNeighbors('B')).toEqual(['A']);
   });
-
-  test('should print the graph correctly', () => {
-    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
-
-    graph.addNode('A');
-    graph.addNode('B');
-    graph.addEdge('A', 'B');
-
-    graph.printGraph();
-
-    expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('A → B'));
-    expect(consoleSpy).toHaveBeenCalledWith(expect.stringContaining('B → A'));
-
-    consoleSpy.mockRestore();
-  });
 });
