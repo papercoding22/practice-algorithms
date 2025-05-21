@@ -11,9 +11,13 @@ function recursive_dfs_adj_matrix(
 
   console.log('Visited: ', node);
 
-  for (const [neighbor, isConnected] of graph[node].entries()) {
-    if (isConnected === 1 && !visited[neighbor]) {
-      recursive_dfs_adj_matrix(graph, neighbor, visited);
+  const connectedArray = graph[node];
+  console.log('Connected Array: ', connectedArray);
+  for (let i = 0; i < connectedArray.length; i++) {
+    const connectedNode = i;
+    const isConnected = connectedArray[i];
+    if (isConnected === 1 && !visited[connectedNode]) {
+      recursive_dfs_adj_matrix(graph, connectedNode, visited);
     }
   }
 }
