@@ -1,3 +1,11 @@
+/**
+ * Description:
+ * Leetcode: https://leetcode.com/problems/gas-station/description/
+ * @param gas 
+ * @param cost 
+ * @returns 
+ */
+
 function canCompleteCircuit(gas: number[], cost: number[]): number {
   if (gas.length === 0 || cost.length === 0) {
     return -1;
