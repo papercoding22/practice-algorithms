@@ -1,9 +1,9 @@
 /**
  * Description:
  * Leetcode: https://leetcode.com/problems/gas-station/description/
- * @param gas 
- * @param cost 
- * @returns 
+ * @param gas
+ * @param cost
+ * @returns
  */
 
 function canCompleteCircuit(gas: number[], cost: number[]): number {

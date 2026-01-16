@@ -13,7 +13,7 @@
  * Return the number of distinct averages calculated using the above process.
  * Example:
  * - Input: nums = [4,1,4,0,3,5] => Output: 2
- *   Explanation: 
+ *   Explanation:
  *   1. Remove 0 and 5, average = (0+5)/2 = 2.5
  *   2. Remove 1 and 4, average = (1+4)/2 = 2.5
  *   3. Remove 3 and 4, average = (3+4)/2 = 3.5
