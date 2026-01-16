@@ -59,10 +59,8 @@ describe('selectionSort()', () => {
   });
 
   it('should sort an array with extreme values', () => {
-    expect(selectionSort([Number.MAX_SAFE_INTEGER, 0, Number.MIN_SAFE_INTEGER])).toEqual([
-      Number.MIN_SAFE_INTEGER,
-      0,
-      Number.MAX_SAFE_INTEGER,
-    ]);
+    expect(
+      selectionSort([Number.MAX_SAFE_INTEGER, 0, Number.MIN_SAFE_INTEGER]),
+    ).toEqual([Number.MIN_SAFE_INTEGER, 0, Number.MAX_SAFE_INTEGER]);
   });
 });
